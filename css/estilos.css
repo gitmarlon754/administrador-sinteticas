@@ -1,0 +1,187 @@
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Layout general ===== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 1.5rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+}
+
+/* ===== Secciones ===== */
+section {
+  background-color: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+/* ===== Lista de sintéticas ===== */
+#lista-sinteticas {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: #eef2ff;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ===== Formulario ===== */
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+button {
+  padding: 0.6rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4f46e5;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card button {
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.card button:hover {
+  background-color: #dc2626;
+}
+
+.card .acciones {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card .editar {
+  background-color: #22c55e;
+}
+
+.card .editar:hover {
+  background-color: #16a34a;
+}
+
+.mensaje {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.mensaje.exito {
+  background-color: #e6f4ea;
+  color: #1e7e34;
+}
+
+.mensaje.error {
+  background-color: #fdecea;
+  color: #a71d2a;
+}
+
+.oculto {
+  display: none;
+}
+.card {
+  animation: aparecer 0.2s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
